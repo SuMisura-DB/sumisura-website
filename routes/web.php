@@ -1,35 +1,42 @@
 <?php
 
-use App\Livewire\Settings\Appearance;
-use App\Livewire\Settings\Password;
-use App\Livewire\Settings\Profile;
-use App\Livewire\Settings\TwoFactor;
 use Illuminate\Support\Facades\Route;
-use Laravel\Fortify\Features;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::view('/', 'welcome');
 
-Route::view('dashboard', 'dashboard')
+// Route::view('dashboard', 'dashboard')
+//     ->middleware(['auth', 'verified'])
+//     ->name('dashboard');
+
+// Route::get('dashboard', [App\Http\Controllers\Dashboard\HomeController::class, 'root'])
+//     ->middleware(['auth', 'verified'])
+//     ->name('root');
+
+Route::prefix('dashboard')
     ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+    ->name('dashboard.')
+    ->group(function () {
 
-Route::middleware(['auth'])->group(function () {
-    Route::redirect('settings', 'settings/profile');
+        // Dashboard index
+        Route::get('/', [App\Http\Controllers\Dashboard\DashboardController::class, 'root'])
+            ->name('index');
 
-    Route::get('settings/profile', Profile::class)->name('profile.edit');
-    Route::get('settings/password', Password::class)->name('user-password.edit');
-    Route::get('settings/appearance', Appearance::class)->name('appearance.edit');
+        /* Projects */
+        Route::get('/projects/create', [App\Http\Controllers\Dashboard\DashboardController::class, 'createConstructionProject'])
+            ->name('create_construction_project');
 
-    Route::get('settings/two-factor', TwoFactor::class)
-        ->middleware(
-            when(
-                Features::canManageTwoFactorAuthentication()
-                    && Features::optionEnabled(Features::twoFactorAuthentication(), 'confirmPassword'),
-                ['password.confirm'],
-                [],
-            ),
-        )
-        ->name('two-factor.show');
-});
+        /* Blog */
+        Route::get('/blog/list', [App\Http\Controllers\Dashboard\DashboardController::class, 'blogList'])
+            ->name('blog_list');
+
+        // Another example page
+        Route::get('/settings', [App\Http\Controllers\Dashboard\SettingsController::class, 'index'])
+            ->name('settings');
+    });
+
+
+Route::view('profile', 'profile')
+    ->middleware(['auth'])
+    ->name('profile');
+
+require __DIR__.'/auth.php';
