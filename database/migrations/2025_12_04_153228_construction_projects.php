@@ -56,6 +56,10 @@ return new class extends Migration
             /* Featured */
             $table->boolean('is_featured')->default(false);
 
+            /* Visibility & Active */
+            $table->bolean('visibility')->default(1);
+            $table->boolean('active')->default(1);
+
             $table->timestamps();
         });
     }

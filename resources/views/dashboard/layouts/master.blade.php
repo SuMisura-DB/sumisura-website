@@ -44,6 +44,23 @@
 
     <!-- JAVASCRIPT -->
     @include('dashboard.layouts.vendor-scripts')
+
+    @push('scripts')
+        <script>
+            document.addEventListener('livewire:init', () => {
+                Livewire.on('show-toast', ({ type, message }) => {
+                    // Aqui chamas as toasts do Velzon
+                    // Exemplo genérico – adapta ao teu helper real
+                    if (typeof window.VelzonToast !== 'undefined') {
+                        window.VelzonToast.show(type, message);
+                    } else {
+                        // fallback simples
+                        console.log(`[${type}] ${message}`);
+                    }
+                });
+            });
+        </script>
+    @endpush
 </body>
 
 </html>

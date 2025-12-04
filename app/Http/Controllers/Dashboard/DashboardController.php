@@ -128,10 +128,16 @@ class DashboardController extends Controller
         }
     }
 
+    // See Construction Projects (Ver Obras)
+    public function listConstructionProjects(Request $request)
+    {
+        return view('dashboard.construction-projects-list');
+    }
+
     // Create Construction (Criar Obra)
     public function createConstructionProject(Request $request)
     {
-        return view('dashboard.create-construction-project');
+        return view('dashboard.construction-projects-create');
     }
 
     public function blogList(Request $request)

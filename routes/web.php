@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Admin\ConstructionProjectForm;
 
 Route::view('/', 'welcome');
 
@@ -22,8 +23,16 @@ Route::prefix('dashboard')
             ->name('index');
 
         /* Projects */
-        Route::get('/projects/create', [App\Http\Controllers\Dashboard\DashboardController::class, 'createConstructionProject'])
-            ->name('create_construction_project');
+            // Create
+            // Route::get('/projects/create', [App\Http\Controllers\Dashboard\DashboardController::class, 'createConstructionProject'])
+            //     ->name('construction_projects_create');
+
+            Route::get('/products/create', ConstructionProjectForm::class)->name('construction_projects_create');
+
+            // List
+            Route::get('/projects/list', [App\Http\Controllers\Dashboard\DashboardController::class, 'listConstructionProjects'])
+                ->name('construction_projects_list');
+        /* End of Projects */
 
         /* Blog */
         Route::get('/blog/list', [App\Http\Controllers\Dashboard\DashboardController::class, 'blogList'])
