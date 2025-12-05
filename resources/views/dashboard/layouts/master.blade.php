@@ -12,7 +12,9 @@
     @include('dashboard.layouts.head-css')
 
     <!-- Styles | Loading to take advantage of HMR (Vite) -->
-    @vite(['resources/js/app.js'])
+    @vite(['resources/js/dashboard/app.js'])
+
+    @livewireStyles
 
 </head>
 
@@ -61,6 +63,8 @@
             });
         </script>
     @endpush
+
+    @livewireScripts
 </body>
 
 </html>

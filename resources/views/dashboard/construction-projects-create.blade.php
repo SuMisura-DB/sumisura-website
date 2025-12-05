@@ -16,8 +16,14 @@
 
     <form id="create-construction-project-form"
             autocomplete="off"
+            method="POST"
+            enctype="multipart/form-data"
             class="needs-validation"
+            action="{{ route('dashboard.construction_projects_create_request') }}"
             wire:submit.prevent="save">
+
+        @csrf
+
         <div class="row">
             <div class="col-lg-8">
                     <div class="card">
@@ -33,38 +39,40 @@
                                         id="product-title-input"
                                         placeholder="Enter product title"
                                         wire:model.defer="title"
+                                        name="title"
                                         required>
                                     <div class="invalid-feedback">Please Enter a product title.</div>
                                 </div>
                             </div>
+
+                            {{-- Descrição --}}
                             <div>
                                 <label>Descrição</label>
-
-                                <div id="ckeditor-classic">
-                                    <p>Tommy Hilfiger men striped pink sweatshirt. Crafted with cotton. Material composition is 100% organic cotton. This is one of the world's leading designer lifestyle brands and is internationally recognized for celebrating the essence of classic American cool style, featuring preppy with a twist designs.</p>
-                                    <ul>
-                                        <li>Full Sleeve</li>
-                                        <li>Cotton</li>
-                                        <li>All Sizes available</li>
-                                        <li>4 Different Color</li>
-                                    </ul>
-                                </div>
+                                <textarea
+                                    class="ckeditor"
+                                    name="description"
+                                    placeholder="Introduzir descrição"></textarea>
                             </div>
+
                         </div>
                     </div>
                     <!-- end card -->
 
                     <div class="card">
+
                         <div class="card-header">
                             <h5 class="card-title mb-0">Galeria</h5>
                         </div>
+                        
                         <div class="card-body">
                             <div class="mb-4">
-                                <h5 class="fs-14 mb-1">Main Image</h5>
+                                <h5 class="fs-14 mb-1">Imagem Principal</h5>
                                 <p class="text-muted">Adicionar Imagem Principal</p>
+
                                 <div class="text-center">
                                     <div class="position-relative d-inline-block">
                                         <div class="position-absolute top-100 start-100 translate-middle">
+
                                             <label for="product-image-input" class="mb-0"  data-bs-toggle="tooltip" data-bs-placement="right" title="Select Image">
                                                 <div class="avatar-xs">
                                                     <div class="avatar-title bg-light border rounded-circle text-muted cursor-pointer">
@@ -72,8 +80,15 @@
                                                     </div>
                                                 </div>
                                             </label>
-                                            <input class="form-control d-none" value="" id="product-image-input" type="file"
+
+                                            <input
+                                                class="form-control d-none"
+                                                value=""
+                                                id="product-image-input"
+                                                name="product-main-image"
+                                                type="file"
                                                 accept="image/png, image/gif, image/jpeg">
+
                                         </div>
                                         <div class="avatar-lg">
                                             <div class="avatar-title bg-light rounded">
@@ -82,6 +97,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                             <div>
                                 <h5 class="fs-14 mb-1">Galeria da Obra</h5>
@@ -241,11 +257,13 @@
                         <h5 class="card-title mb-0">Publish</h5>
                     </div>
                     <div class="card-body">
+
                         <div class="mb-3">
                             <label for="choices-publish-status-input" class="form-label">Estado</label>
 
                             <select class="form-select"
                                     id="choices-publish-status-input"
+                                    name="published_status"
                                     data-choices data-choices-search-false
                                     wire:model.defer="status">
                                 <option value="Published" selected>Publicado</option>
@@ -258,6 +276,7 @@
                             <label for="choices-publish-visibility-input" class="form-label">Visibilidade</label>
                             <select class="form-select"
                                     id="choices-publish-visibility-input"
+                                    name="visibility_status"
                                     data-choices data-choices-search-false
                                     wire:model.defer="visibility">
                                 <option value="Public" selected>Público</option>
@@ -277,8 +296,14 @@
                     <div class="card-body">
                         <div>
                             <label for="datepicker-publish-input" class="form-label">Data e Hora</label>
-                            <input type="text" id="datepicker-publish-input" class="form-control"
-                                placeholder="Enter publish date" data-provider="flatpickr" data-date-format="d.m.y"
+                            <input
+                                type="text"
+                                id="datepicker-publish-input"
+                                name="publish_schedule"
+                                class="form-control"
+                                placeholder="Enter publish date"
+                                data-provider="flatpickr"
+                                data-date-format="d.m.y"
                                 data-enable-time>
                         </div>
 
@@ -300,20 +325,57 @@
 
                 <div class="card">
                     <div class="card-header">
+                        <h5 class="card-title mb-0">Cliente</h5>
+                    </div>
+                    <!-- end card body -->
+                    <div class="card-body">
+                        <div>
+                            <label for="client-name" class="form-label">Nome</label>
+                            <input
+                                type="text"
+                                id="client-name-input"
+                                name="client_name"
+                                class="form-control">
+                        </div>
+
+                        {{-- Date --}}
+                        {{-- <div>
+                            <label for="exampleInputdate" class="form-label">Input Date</label>
+                            <input type="date" class="form-control" id="exampleInputdate">
+                        </div> --}}
+
+                        {{-- Time --}}
+                        {{-- <div>
+                            <label for="exampleInputtime" class="form-label">Input Time</label>
+                            <input type="time" class="form-control" id="exampleInputtime" value="08:56 AM">
+                        </div> --}}
+
+                    </div>
+                </div>
+
+                {{-- Categories (Categorias de Obra) --}}
+                <div class="card">
+                    <div class="card-header">
                         <h5 class="card-title mb-0">Product Categories</h5>
                     </div>
                     <div class="card-body">
                         <p class="text-muted mb-2"> <a href="#" class="float-end text-decoration-underline">Add
                             New</a>Select product category</p>
                             <select class="form-select" id="choices-category-input" name="choices-category-input" data-choices data-choices-search-false>
-                                <option value="Appliances">Appliances</option>
+
+                                {{-- <option value="Appliances">Appliances</option>
                                 <option value="Automotive Accessories">Automotive Accessories</option>
                                 <option value="Electronics">Electronics</option>
                                 <option value="Fashion">Fashion</option>
                                 <option value="Furniture">Furniture</option>
                                 <option value="Grocery">Grocery</option>
                                 <option value="Kids">Kids</option>
-                                <option value="Watches">Watches</option>
+                                <option value="Watches">Watches</option> --}}
+
+                                @foreach ($categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>   
+                                @endforeach
+
                             </select>
                     </div>
                     <!-- end card body -->
@@ -342,10 +404,12 @@
                     <div class="card-body">
                         <p class="text-muted mb-2">Adicionar descrição curta</p>
                         {{-- <textarea class="form-control" placeholder="Must enter minimum of a 100 characters" rows="3"></textarea> --}}
-                        <textarea class="form-control"
-                                  rows="6"
-                                  wire:model.defer="short_description"
-                                  placeholder="Descrição da obra"></textarea>
+                        <textarea
+                            class="form-control"
+                            name="short_description"
+                            rows="6"
+                            wire:model.defer="short_description"
+                            placeholder="Descrição da obra"></textarea>
                     </div>
                     <!-- end card body -->
                 </div>
@@ -362,7 +426,7 @@
     <script src="{{ URL::asset('build/libs/@ckeditor/ckeditor5-build-classic/build/ckeditor.js') }}"></script>
 
     <script src="{{ URL::asset('build/libs/dropzone/dropzone-min.js') }}"></script>
-    <script src="{{ URL::asset('build/js/pages/ecommerce-product-create.init.js') }}"></script>
+    {{-- <script src="{{ URL::asset('build/js/pages/ecommerce-product-create.init.js') }}"></script> --}}
 
     <script src="{{ URL::asset('build/js/app.js') }}"></script>
 @endsection

@@ -114,7 +114,7 @@
 
                             {{-- Create --}}
                             <li class="nav-item">
-                                <a href="{{ route('dashboard.construction_projects_list') }}" class="nav-link">Criar Artigo</a>
+                                <a href="{{ route('dashboard.create_article') }}" class="nav-link">Criar Artigo</a>
                             </li>
 
                             {{-- Visualize --}}

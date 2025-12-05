@@ -17,7 +17,7 @@ return new class extends Migration
             /* General Columns */
             $table->id();
             $table->string('name');
-            $table->char('ref', 16)->unique();
+            $table->char('ref', 16)->nullable()->unique();
 
             /* Client Name */
             $table->string('client_name');
@@ -51,17 +51,30 @@ return new class extends Migration
             $table->float('longitude', 12, 9)->nullable()->default(null);
 
             /* Youtube ID */
-            $table->char('youtube_id', 255)->default(null);
+            $table->char('youtube_id', 255)->nullable()->default(null);
 
             /* Featured */
             $table->boolean('is_featured')->default(false);
 
             /* Visibility & Active */
-            $table->bolean('visibility')->default(1);
-            $table->boolean('active')->default(1);
+            $table->boolean('visibility')->default(true);
+            $table->boolean('active')->default(true);
 
             $table->timestamps();
         });
+
+        /* Categorização de Obra (Remodelação, Renovação, Construção Nova, etc.) */
+        Schema::create('construction_projects_category', function (Blueprint $table){
+            $table->id();
+            $table->string('name', 30)->unique();
+        });
+
+        // Opções base
+        DB::table('construction_projects_category')->insert([
+            ['name' => 'Construção Nova'],
+            ['name' => 'Renovação'],
+            ['name' => 'Remodelação'], 
+        ]);
     }
 
     /**
@@ -71,5 +84,6 @@ return new class extends Migration
     {
         //
         Schema::dropIfExists('construction_projects');
+        Schema::dropIfExists('construction_projects_category');
     }
 };

@@ -10,6 +10,9 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ URL::asset('build/images/favicon.ico')}}">
     @include('dashboard.layouts.head-css')
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
 </head>
 <body>
 

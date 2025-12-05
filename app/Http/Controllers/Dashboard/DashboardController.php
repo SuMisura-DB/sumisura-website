@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Models\User;
+use App\Models\ConstructionProjectCategory;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -137,11 +138,23 @@ class DashboardController extends Controller
     // Create Construction (Criar Obra)
     public function createConstructionProject(Request $request)
     {
-        return view('dashboard.construction-projects-create');
+
+        $projectConstructionCategories = ConstructionProjectCategory::get();
+
+        return view('dashboard.construction-projects-create', ['categories' => $projectConstructionCategories]);
     }
 
     public function blogList(Request $request)
     {
         return view('dashboard.pages-blog-list');
+    }
+
+        // Create Construction (Criar Obra)
+    public function createArticle(Request $request)
+    {
+
+        // $projectConstructionCategories = ConstructionProjectCategory::get();
+
+        return view('dashboard.blog-articles-create');
     }
 }

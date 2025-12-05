@@ -4,11 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ConstructionProject extends Model
+class ConstructionProjectCategory extends Model
 {
     //
     // use HasFactory;
-    protected $table = 'construction_projects';
+    protected $table = 'construction_projects_category';
     protected $primaryKey = 'id';
     protected $guarded = [];
 
