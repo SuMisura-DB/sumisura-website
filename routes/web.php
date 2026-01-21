@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Admin\ConstructionProjectForm;
 
-Route::view('/', 'welcome');
+// Route::view('/', 'welcome');
+
+Route::view('/', 'homepage');
 
 // Route::view('dashboard', 'dashboard')
 //     ->middleware(['auth', 'verified'])
@@ -14,7 +16,9 @@ Route::view('/', 'welcome');
 //     ->name('root');
 
 // Redirect 'dashboard' route requests to the index route (due to the prefix)
-Route::get('/dashboard', fn() => redirect()->route('dashboard.index'))
+// Route::get('/dashboard', fn() => redirect()->route('dashboard.index'))
+//     ->name('dashboard');
+Route::get('/dashboard', [App\Http\Controllers\Dashboard\DashboardController::class, 'root'])
     ->name('dashboard');
 
 
@@ -58,5 +62,6 @@ Route::prefix('dashboard')
 Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
+
 
 require __DIR__.'/auth.php';
