@@ -7,6 +7,10 @@ use App\Livewire\Admin\ConstructionProjectForm;
 
 Route::view('/', 'homepage');
 
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'homepage'])
+    ->name('homepage');
+
 // Route::view('dashboard', 'dashboard')
 //     ->middleware(['auth', 'verified'])
 //     ->name('dashboard');

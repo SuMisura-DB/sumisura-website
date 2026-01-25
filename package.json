@@ -7,6 +7,8 @@
         "dev": "vite"
     },
     "dependencies": {
+        "@fancyapps/ui": "^6.1.9",
+        "@splidejs/splide": "^4.1.4",
         "@tailwindcss/vite": "^4.1.11",
         "autoprefixer": "^10.4.20",
         "axios": "^1.7.4",

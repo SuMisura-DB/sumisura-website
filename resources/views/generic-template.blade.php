@@ -24,13 +24,16 @@
         <!-- Setting the meta theme color - Color which mobile devices tabs will have when visiting the website -->
         <meta name="theme-color" content="#D9AB4D"/>
 
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+
         <!-- Dark Mode Javascript File -->
         <script src="/assets/js/dark-mode.js"></script>
 
         <!-- Styles -->
         @vite([
             'resources/scss/reset.scss',
-            'resources/scss/frontend/app.scss'
+            'resources/scss/frontend/app.scss',
+            'resources/js/app.js'
             ])
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">

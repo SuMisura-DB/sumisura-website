@@ -19,6 +19,8 @@
     {{-- Page Content --}}
     @section('content')
 
+    {{-- @dump($portfolioItems) --}}
+
         {{-- Hero Banner --}}
         <div id="hero-banner">
             <div class="container">
@@ -79,6 +81,94 @@
 
             </div>
         </div>
+
+        {{-- Intro Section --}}
+        <section id="intro-section" class="dark">
+            <div class="container">
+
+                <div class="row">
+
+                    {{-- Intro Content --}}
+                    <div class="intro-content-container col-md-7">
+
+                        {{-- Section Title --}}
+                        <div class="section-title-container">
+
+                            <h2 class="title">Sobre a Su Misura</h2>
+                            {{-- <h5 class="subtitle">Soluções completas para o seu projeto, do início ao fim</h5> --}}
+
+                        </div>
+
+                        <p>A SU MISURA desenvolve projetos chave-na-mão, desde a conceção até à entrega final. Cada obra é conduzida com rigor técnico e atenção ao pormenor, garantindo que a visão inicial se concretiza sem compromissos.</p>
+
+                        <p>Trabalhamos com uma abordagem clara e direta, apoiando decisões informadas e mantendo um acompanhamento constante. A qualidade está nos detalhes, e a confiança constrói-se com presença e honestidade.</p>
+
+
+                        <div class="selling-points-container">
+
+                            <div class="item">
+
+                                <div class="icon-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award text-[#29344A]" data-fg-c4dx17="63.6:63.3347:/src/app/components/Intro.tsx:46:21:1824:155:e:value.icon"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
+                                </div>
+
+                                <h5 class="title">
+                                    Qualidade e detalhe
+                                </h5>
+
+                                <div class="description">
+                                    Acabamentos cuidados e execução sólida.
+                                </div>
+
+                            </div>
+
+                            <div class="item">
+
+                                <div class="icon-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye text-[#29344A]" data-fg-c4dx17="63.6:63.3347:/src/app/components/Intro.tsx:46:21:1824:155:e:value.icon"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                </div>
+
+                                <h5 class="title">
+                                    Transparência
+                                </h5>
+
+                                <div class="description">
+                                    Decisões claras, sem ruído.
+                                </div>
+
+                            </div>
+
+                            <div class="item">
+
+                                <div class="icon-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-handshake text-[#29344A]" data-fg-c4dx17="63.6:63.3347:/src/app/components/Intro.tsx:46:21:1824:155:e:value.icon"><path d="m11 17 2 2a1 1 0 1 0 3-3"></path><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"></path><path d="m21 3 1 11h-2"></path><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"></path><path d="M3 4h8"></path></svg>
+                                </div>
+
+                                <h5 class="title">
+                                    Acompanhamento
+                                </h5>
+
+                                <div class="description">
+                                    Presença e atenção ao longo do projeto.
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    {{-- Intro Image --}}
+                    <div class="intro-image-container col-md-5">
+                        <div class="image-container">
+                            <img src="/assets/img/content/hero-bg.jpg">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
 
         {{-- Services --}}
         <section id="services-section">
@@ -179,109 +269,132 @@
         </section>
 
         {{-- Portfolio --}}
-        <section id="portfolio-section">
+        <section id="portfolio-section" class="dark">
             <div class="container">
 
                 {{-- Section Title --}}
                 <div class="section-title-container">
 
                     <h2 class="title">Portfolio</h2>
-                    <h5 class="subtitle">Projetos realizados com dedicação e excelência</h5>
+                    <h5 class="subtitle">Projetos reais, do briefing à entrega</h5>
 
                 </div>
 
-                {{-- Portfolio Container --}}
-                <div class="portfolio-container">
+                {{-- List Container --}}
+                <div class="portfolio-items-container">
 
-                    {{-- Portfolio Item --}}
-                    <div class="portfolio-item">
+                    @foreach($portfolioItems as $item)
 
-                        <div class="image-container">
+                        @php
+                            $galleryGroup = 'portfolio-' . $item['id'];
+                            $previewImages = array_slice($item['images'], 0, 5); // preview only
+                        @endphp
 
-                            <img class="portfolio-item-img" src="/assets/img/content/portfolio-item.webp">
+                        <div class="portfolio-item">
+
+                            {{-- Gallery Column --}}
+                            <div class="gallery-column-container">
+
+                                {{-- Gallery --}}
+                                <div class="gallery-container splide" data-gallery-group="{{ $galleryGroup }}">
+
+                                    <div class="splide__track">
+                                        <ul class="splide__list">
+                                            @forelse($previewImages as $img)
+                                                <li class="splide__slide">
+                                                    <img src="{{ $img }}" alt="{{ $item['title'] }}">
+                                                </li>
+                                            @empty
+                                                <li class="splide__slide">
+                                                    <img src="{{ asset('assets/img/content/portfolio-item.webp') }}" alt="{{ $item['title'] }}">
+                                                </li>
+                                            @endforelse
+                                        </ul>
+                                    </div>
+
+                                    {{-- Counter (optional if you already did it) --}}
+                                    <div class="splide-counter">1 / {{ max(count($previewImages), 1) }}</div>
+
+                                </div>
+
+                                {{-- Hidden Fancybox links (FULL gallery, all images) --}}
+                                <div class="fancybox-links" style="display:none;">
+                                    @foreach($item['images'] as $img)
+                                        <a href="{{ $img }}" data-fancybox="{{ $galleryGroup }}" data-caption="{{ $item['title'] }}"></a>
+                                    @endforeach
+                                </div>
+
+                                <div class="view-gallery" data-open-gallery="{{ $galleryGroup }}">
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-image" data-fg-rsn18="49.7:49.2474:/src/app/components/PortfolioGallery.tsx:62:9:2336:41:e:ImageIcon::::::sLT"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+                                    </div>
+                                    Ver galeria completa
+                                </div>
+
+                            </div>
+
+                            {{-- Content --}}
+                            <div class="content-container">
+
+                                <div class="location-wrapper mb-3">
+                                <span class="location">{{ $item['location'] }}</span>
+                                </div>
+
+                                <h2 class="title mb-4">{{ $item['title'] }}</h2>
+
+                                <div class="description-container mb-6">
+                                <p class="description">{{ $item['description'] }}</p>
+                                </div>
+
+                                {{-- Tags --}}
+                                @if(!empty($item['tags']))
+                                <div class="tags-container mb-8">
+                                    @foreach($item['tags'] as $tag)
+                                    <div class="tag">{{ $tag }}</div>
+                                    @endforeach
+                                </div>
+                                @endif
+
+                                {{-- Challenge/Solution/Result --}}
+                                @if(!empty($item['csr']))
+                                <div class="challenge-solution-result-container">
+                                    <div class="item">
+                                    <span class="label">Desafio</span>
+                                    <p class="description">{{ $item['csr']['challenge'] ?? '' }}</p>
+                                    </div>
+                                    <div class="item">
+                                    <span class="label">Solução</span>
+                                    <p class="description">{{ $item['csr']['solution'] ?? '' }}</p>
+                                    </div>
+                                    <div class="item">
+                                    <span class="label">Resultado</span>
+                                    <p class="description">{{ $item['csr']['result'] ?? '' }}</p>
+                                    </div>
+                                </div>
+                                @endif
+
+                                <hr>
+
+                                {{-- Proof Points (optional) --}}
+                                @if(!empty($item['proof_points']))
+                                <div class="proof-points-container">
+                                    @foreach($item['proof_points'] as $point)
+                                    <div class="point">
+                                        <div class="icon">
+                                            {{-- @include('partials.portfolio-proof-icon', ['name' => $point['icon'] ?? null]) --}}
+                                            {!! $point['icon'] !!}
+                                        </div>
+                                        <div class="desc">{{ $point['text'] ?? '' }}</div>
+                                    </div>
+                                    @endforeach
+                                </div>
+                                @endif
+
+                            </div>
 
                         </div>
 
-                        <div class="content-container">
-
-                            <h6 class="service-name">Construção Nova</h6>
-                            <span class="service-location">Lisboa</span>
-
-                        </div>
-
-                    </div>
-
-                    {{-- Portfolio Item --}}
-                    <div class="portfolio-item">
-
-                        <div class="image-container">
-
-                            <img class="portfolio-item-img" src="/assets/img/content/portfolio-item.webp">
-
-                        </div>
-
-                        <div class="content-container">
-
-                            <h6 class="service-name">Construção Nova</h6>
-                            <span class="service-location">Lisboa</span>
-
-                        </div>
-
-                    </div>
-
-                    {{-- Portfolio Item --}}
-                    <div class="portfolio-item">
-
-                        <div class="image-container">
-
-                            <img class="portfolio-item-img" src="/assets/img/content/portfolio-item.webp">
-
-                        </div>
-
-                        <div class="content-container">
-
-                            <h6 class="service-name">Construção Nova</h6>
-                            <span class="service-location">Lisboa</span>
-
-                        </div>
-
-                    </div>
-
-                    {{-- Portfolio Item --}}
-                    <div class="portfolio-item">
-
-                        <div class="image-container">
-
-                            <img class="portfolio-item-img" src="/assets/img/content/portfolio-item.webp">
-
-                        </div>
-
-                        <div class="content-container">
-
-                            <h6 class="service-name">Construção Nova</h6>
-                            <span class="service-location">Lisboa</span>
-
-                        </div>
-
-                    </div>
-
-                    {{-- Portfolio Item --}}
-                    <div class="portfolio-item">
-
-                        <div class="image-container">
-
-                            <img class="portfolio-item-img" src="/assets/img/content/portfolio-item.webp">
-
-                        </div>
-
-                        <div class="content-container">
-
-                            <h6 class="service-name">Construção Nova</h6>
-                            <span class="service-location">Lisboa</span>
-
-                        </div>
-
-                    </div>
+                    @endforeach
 
                 </div>
 
