@@ -55,16 +55,17 @@
         @else
 
             {{-- FOLLOW - INDEX --}}
-            <meta name="robots" content="FOLLOW,INDEX">
+            {{-- <meta name="robots" content="FOLLOW,INDEX"> --}}
+            <meta name="robots" content="noindex, nofollow">
 
             <!-- Google tag (gtag.js) -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXJX9J4JSM"></script>
             <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-                gtag('config', 'G-YXJX9J4JSM');
+            gtag('config', 'G-YXJX9J4JSM');
             </script>
 
         @endenv
