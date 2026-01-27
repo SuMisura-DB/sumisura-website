@@ -8,7 +8,7 @@
 
         <base href="{{ url('/') }}" target="_self">
 
-        <title>SuMisura</title>
+        <title>Su Misura</title>
         <meta name="description" content="SuMisura Description">
         <meta name="keywords" content="portugal homes golden visa properties">
 
@@ -126,7 +126,7 @@
     @stack('scripts')
 
 
-    
+
     @env(['local', 'staging', 'development'])
 
     @else
