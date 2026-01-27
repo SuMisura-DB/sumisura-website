@@ -13,19 +13,19 @@
             <div class="menu-container">
 
                 {{-- Item --}}
-                <a>Sobre</a>
+                <a class="scroll-to-section" data-section-scroll="intro-section">Sobre</a>
 
                 {{-- Item --}}
-                <a>Serviços</a>
+                <a class="scroll-to-section" data-section-scroll="services-section">Serviços</a>
 
                 {{-- Item --}}
-                <a>Portfolio</a>
+                <a class="scroll-to-section" data-section-scroll="portfolio-section">Portfolio</a>
 
                 {{-- Item --}}
-                <a>Processo</a>
+                <a class="scroll-to-section" data-section-scroll="how-we-work-section">Processo</a>
 
                 {{-- Item --}}
-                <a>Contacto</a>
+                <a class="scroll-to-section" data-section-scroll="contact-section">Contacto</a>
 
                 {{-- Item --}}
                 <button class="scroll-to-section" data-section-scroll="contact-section">Pedir Orçamento</button>

@@ -91,7 +91,7 @@ $(function () {
         if ($target.length) {
             // Scroll to the section
             $('html, body').animate({
-                scrollTop: $target.offset().top
+                scrollTop: $target.offset().top - headerHeight
             }, 800); // 800ms animation duration
             
             // Special handling for contact-section
@@ -107,5 +107,37 @@ $(function () {
         }
     });
 
+
+    /* HEADER SCROLL POSITION FIXED */
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {
+            scrollHeader()
+        };
+
+        // Get the header
+        // var header = document.getElementById("header");
+        var header = document.getElementById("main-header");
+        // var headerElement = document.getElementById("header");
+        // Hover menus that we want to append to the header if it is with a position:fixed
+        // var hoverMenus = document.getElementsByClassName("dropdown-menu");
+        var body = document.body;
+
+        var headerHeight = header.clientHeight;
+        // console.log(headerHeight);
+
+        // Get the offset position of the navbar
+        var sticky = header.offsetTop + headerHeight;
+
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function scrollHeader() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+                body.style.marginTop = headerHeight + "px";
+            } else {
+                header.classList.remove("sticky");
+                body.style.marginTop = '0px';
+            }
+        }
+    /* END OF HEADER SCROLL POSITION FIXED */
 
 });

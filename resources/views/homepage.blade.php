@@ -33,11 +33,11 @@
                     {{-- Buttons Container --}}
                     <div class="buttons-container">
 
-                        <button class="cta-button">
+                        <button class="cta-button scroll-to-section" data-section-scroll="contact-section">
                             Pedir Orçamento
                         </button>
 
-                        <button class="cta-button">
+                        <button class="cta-button scroll-to-section" data-section-scroll="portfolio-section">
                             Ver Portfolio
                         </button>
                         
@@ -76,7 +76,10 @@
                 
                 {{-- Background Image --}}
                 <div class="bg-image-container">
-                    <img src="/assets/img/content/hero-bg.jpg">
+                    {{-- <img src="/assets/img/content/hero-bg.jpg"> --}}
+                    <video playsinline muted loop autoplay>
+                        <source src="/assets/video/banner-bg.mp4" type="video/mp4">
+                    </video>
                 </div>
 
             </div>
