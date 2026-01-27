@@ -49,7 +49,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         {{-- <link rel="stylesheet" href="{{ mix('/assets/css/app.css') }}"> --}}
 
-        {{-- Website Indexing --}}
+        {{-- Local/Prod--}}
         @env(['local', 'staging', 'development'])
             <meta name="robots" content="noindex, nofollow">
         @else
@@ -61,11 +61,11 @@
             <!-- Google tag (gtag.js) -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXJX9J4JSM"></script>
             <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
 
-            gtag('config', 'G-YXJX9J4JSM');
+                gtag('config', 'G-YXJX9J4JSM');
             </script>
 
         @endenv
@@ -124,6 +124,19 @@
 
     {{-- Loading custom scripts --}}
     @stack('scripts')
+
+
+    
+    @env(['local', 'staging', 'development'])
+
+    @else
+
+        <!-- Start of HubSpot Embed Code -->
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147638379.js"></script>
+        <!-- End of HubSpot Embed Code -->
+
+    @endenv
+
 
 </body>
 </html>
