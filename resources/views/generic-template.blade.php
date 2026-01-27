@@ -53,8 +53,20 @@
         @env(['local', 'staging', 'development'])
             <meta name="robots" content="noindex, nofollow">
         @else
+
             {{-- FOLLOW - INDEX --}}
             <meta name="robots" content="FOLLOW,INDEX">
+
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXJX9J4JSM"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-YXJX9J4JSM');
+            </script>
+
         @endenv
 
 
