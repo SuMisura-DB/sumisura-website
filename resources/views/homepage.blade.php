@@ -665,7 +665,7 @@
                                 <div class="input-container">
                                     <label>Tipo de Serviço *</label>
                                     
-                                    <select name="type_of_service" required>
+                                    <select name="tipo_de_serviço" required>
                                         <option selected hidden value="">Por favor selecione</option>
                                         <option>A</option>
                                         <option>B</option>
