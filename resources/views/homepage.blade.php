@@ -648,7 +648,7 @@
                                 {{-- Email --}}
                                 <div class="input-container">
                                     <label>Email *</label>
-                                    <input name="name" type="name" required>
+                                    <input name="email" type="email" required>
                                 </div>
 
                             </div>
@@ -658,14 +658,14 @@
                                 {{-- Phone --}}
                                 <div class="input-container">
                                     <label>Telefone *</label>
-                                    <input name="name" type="name" required>
+                                    <input name="tel" type="phone_number" required>
                                 </div>
 
                                 {{-- Type Of Service --}}
                                 <div class="input-container">
                                     <label>Tipo de Serviço *</label>
                                     
-                                    <select required>
+                                    <select name="type_of_service" required>
                                         <option selected hidden value="">Por favor selecione</option>
                                         <option>A</option>
                                         <option>B</option>
@@ -679,7 +679,7 @@
                             {{-- Message --}}
                             <div class="input-container">
                                 <label>Mensagem</label>
-                                <textarea></textarea>
+                                <textarea name="message" required></textarea>
                             </div>
 
                             {{-- Submit --}}
