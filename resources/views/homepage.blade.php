@@ -642,7 +642,7 @@
                                 {{-- Name --}}
                                 <div class="input-container">
                                     <label>Nome *</label>
-                                    <input name="name" type="name" required>
+                                    <input name="full_name" type="name" required>
                                 </div>
 
                                 {{-- Email --}}
@@ -665,7 +665,7 @@
                                 <div class="input-container">
                                     <label>Tipo de Serviço *</label>
                                     
-                                    <select name="tipo_de_serviço" required>
+                                    <select name="type_of_service" required>
                                         <option selected hidden value="">Por favor selecione</option>
                                         <option>A</option>
                                         <option>B</option>
