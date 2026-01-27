@@ -65,6 +65,7 @@ class HomeController extends Controller
         foreach ($portfolioItems as &$item) {
             $item['images'] = $this->getPortfolioImages($item['id']);
         }
+        
         unset($item);
 
 
