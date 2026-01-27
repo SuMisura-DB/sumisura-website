@@ -80,4 +80,32 @@ $(function () {
         Fancybox.show(items, { startIndex: 0 });
     });
 
+    /* Scroll down to areas */
+    $(document).on('click', '.scroll-to-section', function(e) {
+        e.preventDefault();
+        
+        // Get the target section ID from data attribute
+        var targetSection = $(this).data('section-scroll');
+        var $target = $('#' + targetSection);
+        
+        if ($target.length) {
+            // Scroll to the section
+            $('html, body').animate({
+                scrollTop: $target.offset().top
+            }, 800); // 800ms animation duration
+            
+            // Special handling for contact-section
+            if (targetSection === 'contact-section') {
+                // Wait for scroll to complete, then focus first input
+                setTimeout(function() {
+                    var $firstInput = $target.find('form input:first');
+                    if ($firstInput.length) {
+                        $firstInput.focus();
+                    }
+                }, 850); // Slightly longer than scroll animation
+            }
+        }
+    });
+
+
 });
