@@ -36,6 +36,16 @@
             'resources/js/app.js'
             ])
 
+        <!-- Favicon(s) -->
+        <link rel="icon" type="image/png" href="/assets/img/favicon/favicon16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="/assets/img/favicon/favicon32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/assets/img/favicon/favicon96x96.png" sizes="96x96">
+
+        <!-- Favicons optimized for Apple devices -->
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/favicon114x114.png" >
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/favicon152x152.png" >
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/favicon180x180.png">
+
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         {{-- <link rel="stylesheet" href="{{ mix('/assets/css/app.css') }}"> --}}
 
