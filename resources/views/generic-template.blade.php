@@ -49,6 +49,14 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         {{-- <link rel="stylesheet" href="{{ mix('/assets/css/app.css') }}"> --}}
 
+        {{-- Website Indexing --}}
+        @env(['local', 'staging', 'development'])
+            <meta name="robots" content="noindex, nofollow">
+        @else
+            {{-- FOLLOW - INDEX --}}
+            <meta name="robots" content="FOLLOW,INDEX">
+        @endenv
+
 
         {{-- Loading whatever custom styles the view may have --}}
         @stack('styles')
