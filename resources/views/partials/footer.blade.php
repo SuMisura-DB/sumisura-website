@@ -36,16 +36,19 @@
 
                 <ul>
                     <li>
-                        <a>Serviços</a>
+                        <a class="scroll-to-section" data-section-scroll="intro-section">Sobre</a>
                     </li>
                     <li>
-                        <a>Portfolio</a>
+                        <a class="scroll-to-section" data-section-scroll="services-section">Serviços</a>
                     </li>
                     <li>
-                        <a>Sobre</a>
+                        <a class="scroll-to-section" data-section-scroll="portfolio-section">Portfolio</a>
                     </li>
                     <li>
-                        Processo
+                        <a class="scroll-to-section" data-section-scroll="how-we-work-section">Processo</a>
+                    </li>
+                    <li>
+                        <a class="scroll-to-section" data-section-scroll="contact-section">Contacto</a>
                     </li>
                 </ul>
 
@@ -58,13 +61,13 @@
 
                 <ul>
                     <li>
-                        <a>Serviços</a>
+                        <a href="tel:+351960147366">+351 960 147 366</a>
                     </li>
                     <li>
-                        <a>Portfolio</a>
+                        <a href="mailto:geral@sumisura-db.com">geral@sumisura-db.com</a>
                     </li>
                     <li>
-                        <a>Sobre</a>
+                        <a>Lisboa e Grande Lisboa</a>
                     </li>
                 </ul>
 

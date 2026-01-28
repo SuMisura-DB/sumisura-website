@@ -59,7 +59,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check text-[#131823]" data-fg-eh6d32="2.20:2.3668:/src/app/components/Hero.tsx:74:17:3425:62:e:Check::::::BUmF"><path d="M20 6 9 17l-5-5"></path></svg>
                             </div>
 
-                            <span>Chave-na-mão</span>
+                            <span>Prazos claros</span>
                         </div>
 
                         <div class="guarantee">
@@ -67,7 +67,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check text-[#131823]" data-fg-eh6d32="2.20:2.3668:/src/app/components/Hero.tsx:74:17:3425:62:e:Check::::::BUmF"><path d="M20 6 9 17l-5-5"></path></svg>
                             </div>
 
-                            <span>Chave-na-mão</span>
+                            <span>Qualidade e detalhe</span>
                         </div>
 
                     </div>
@@ -426,14 +426,18 @@
                             <span>01</span>
                         </div>
 
-                        {{-- Title --}}
-                        <div class="title-container">
-                            <h4>Briefing</h4>
-                        </div>
+                        <div class="item-content">
 
-                        {{-- Description --}}
-                        <div class="description-container">
-                            <p>Reunião inicial para entender as suas necessidades e visão</p>
+                            {{-- Title --}}
+                            <div class="title-container">
+                                <h4>Briefing</h4>
+                            </div>
+
+                            {{-- Description --}}
+                            <div class="description-container">
+                                <p>Reunião inicial para entender as suas necessidades e visão</p>
+                            </div>
+
                         </div>
 
                     </div>
@@ -446,14 +450,18 @@
                             <span>02</span>
                         </div>
 
-                        {{-- Title --}}
-                        <div class="title-container">
-                            <h4>Projeto/3D</h4>
-                        </div>
+                        <div class="item-content">
 
-                        {{-- Description --}}
-                        <div class="description-container">
-                            <p>Desenvolvimento do projeto arquitetónico e visualização 3D</p>
+                            {{-- Title --}}
+                            <div class="title-container">
+                                <h4>Projeto/3D</h4>
+                            </div>
+
+                            {{-- Description --}}
+                            <div class="description-container">
+                                <p>Desenvolvimento do projeto arquitetónico e visualização 3D</p>
+                            </div>
+
                         </div>
 
                     </div>
@@ -466,14 +474,18 @@
                             <span>03</span>
                         </div>
 
-                        {{-- Title --}}
-                        <div class="title-container">
-                            <h4>Orçamento</h4>
-                        </div>
+                        <div class="item-content">
 
-                        {{-- Description --}}
-                        <div class="description-container">
-                            <p>Proposta detalhada e transparente de custos e prazos</p>
+                            {{-- Title --}}
+                            <div class="title-container">
+                                <h4>Orçamento</h4>
+                            </div>
+
+                            {{-- Description --}}
+                            <div class="description-container">
+                                <p>Proposta detalhada e transparente de custos e prazos</p>
+                            </div>
+
                         </div>
 
                     </div>
@@ -486,14 +498,18 @@
                             <span>04</span>
                         </div>
 
-                        {{-- Title --}}
-                        <div class="title-container">
-                            <h4>Execução</h4>
-                        </div>
+                        <div class="item-content">
 
-                        {{-- Description --}}
-                        <div class="description-container">
-                            <p>Gestão e construção com acompanhamento contínuo</p>
+                            {{-- Title --}}
+                            <div class="title-container">
+                                <h4>Execução</h4>
+                            </div>
+
+                            {{-- Description --}}
+                            <div class="description-container">
+                                <p>Gestão e construção com acompanhamento contínuo</p>
+                            </div>
+
                         </div>
 
                     </div>
@@ -506,14 +522,18 @@
                             <span>05</span>
                         </div>
 
-                        {{-- Title --}}
-                        <div class="title-container">
-                            <h4>Entrega</h4>
-                        </div>
+                        <div class="item-content">
 
-                        {{-- Description --}}
-                        <div class="description-container">
-                            <p>Finalização e entrega do projeto pronto a habitar</p>
+                            {{-- Title --}}
+                            <div class="title-container">
+                                <h4>Entrega</h4>
+                            </div>
+
+                            {{-- Description --}}
+                            <div class="description-container">
+                                <p>Finalização e entrega do projeto pronto a habitar</p>
+                            </div>
+
                         </div>
 
                     </div>
