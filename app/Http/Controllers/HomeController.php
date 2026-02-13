@@ -13,11 +13,55 @@ class HomeController extends Controller
 
         // Portfolio items
         $portfolioItems = [
+            // [
+            //     'id' => 1,
+            //     'location' => 'Lisboa, Restelo',
+            //     'title' => 'Moradia Moderna em Lisboa',
+            //     'description' => 'Remodelação completa de moradia unifamiliar dos anos 80, transformando espaços compartimentados numa casa contemporânea de conceito aberto, com atenção ao detalhe em cada acabamento.',
+            //     'tags' => ['Remodelação', 'Modelação 3D', 'Gestão de Obra'],
+            //     'csr' => [
+            //         'challenge' => 'Casa antiga com layout fechado',
+            //         'solution'  => 'Conceito aberto e luz natural',
+            //         'result'    => '180m² modernos e funcionais',
+            //     ],
+            //     'proof_points' => [
+            //         [
+            //             'icon' => '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock text-[#D1BCA5]" data-fg-dx9l61="2.22:49.11889:/src/app/components/Portfolio.tsx:268:29:15020:185:e:point.icon"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>', // or 'key'
+            //             'text' => 'Prazo cumprido: 6 meses',
+            //         ],
+            //         [
+            //             'icon' => '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-key text-[#D1BCA5]" data-fg-dx9l61="2.22:49.11889:/src/app/components/Portfolio.tsx:268:29:15020:185:e:point.icon"><path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"></path><path d="m21 2-9.6 9.6"></path><circle cx="7.5" cy="15.5" r="5.5"></circle></svg>',
+            //             'text' => 'Chave-na-mão completo',
+            //         ],
+            //     ],
+            // ],
+            // [
+            //     'id' => 2,
+            //     'location' => 'Lisboa, Restelo',
+            //     'title' => 'Moradia Moderna em Lisboa',
+            //     'description' => 'Remodelação completa de moradia unifamiliar dos anos 80, transformando espaços compartimentados numa casa contemporânea de conceito aberto, com atenção ao detalhe em cada acabamento.',
+            //     'tags' => ['Remodelação', 'Modelação 3D', 'Gestão de Obra'],
+            //     'csr' => [
+            //         'challenge' => 'Casa antiga com layout fechado',
+            //         'solution'  => 'Conceito aberto e luz natural',
+            //         'result'    => '180m² modernos e funcionais',
+            //     ],
+            //     'proof_points' => [
+            //         [
+            //             'icon' => '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock text-[#D1BCA5]" data-fg-dx9l61="2.22:49.11889:/src/app/components/Portfolio.tsx:268:29:15020:185:e:point.icon"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>', // or 'key'
+            //             'text' => 'Prazo cumprido: 6 meses',
+            //         ],
+            //         [
+            //             'icon' => '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-key text-[#D1BCA5]" data-fg-dx9l61="2.22:49.11889:/src/app/components/Portfolio.tsx:268:29:15020:185:e:point.icon"><path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"></path><path d="m21 2-9.6 9.6"></path><circle cx="7.5" cy="15.5" r="5.5"></circle></svg>',
+            //             'text' => 'Chave-na-mão completo',
+            //         ],
+            //     ],
+            // ],
             [
-                'id' => 1,
-                'location' => 'Lisboa, Restelo',
-                'title' => 'Moradia Moderna em Lisboa',
-                'description' => 'Remodelação completa de moradia unifamiliar dos anos 80, transformando espaços compartimentados numa casa contemporânea de conceito aberto, com atenção ao detalhe em cada acabamento.',
+                'id' => 3,
+                'location' => 'Lisboa, Cais do Sodré',
+                'title' => 'Capricciosa',
+                'description' => 'Obra de união de três edifícios contíguos e instalação de nova estrutura. Obra de interior de restaurante.',
                 'tags' => ['Remodelação', 'Modelação 3D', 'Gestão de Obra'],
                 'csr' => [
                     'challenge' => 'Casa antiga com layout fechado',
@@ -36,10 +80,10 @@ class HomeController extends Controller
                 ],
             ],
             [
-                'id' => 2,
-                'location' => 'Lisboa, Restelo',
-                'title' => 'Moradia Moderna em Lisboa',
-                'description' => 'Remodelação completa de moradia unifamiliar dos anos 80, transformando espaços compartimentados numa casa contemporânea de conceito aberto, com atenção ao detalhe em cada acabamento.',
+                'id' => 4,
+                'location' => 'Lisboa, Cais do Sodré',
+                'title' => 'Novotel',
+                'description' => 'Reabilitação dos pisos de quartos e acessos',
                 'tags' => ['Remodelação', 'Modelação 3D', 'Gestão de Obra'],
                 'csr' => [
                     'challenge' => 'Casa antiga com layout fechado',
@@ -57,7 +101,50 @@ class HomeController extends Controller
                     ],
                 ],
             ],
-
+            [
+                'id' => 5,
+                'location' => 'Lisboa, Cais do Sodré',
+                'title' => 'NTT Data',
+                'description' => 'Transformação dos espaços existentes e ampliação do escritório para novos espaços',
+                'tags' => ['Remodelação', 'Modelação 3D', 'Gestão de Obra'],
+                'csr' => [
+                    'challenge' => 'Casa antiga com layout fechado',
+                    'solution'  => 'Conceito aberto e luz natural',
+                    'result'    => '180m² modernos e funcionais',
+                ],
+                'proof_points' => [
+                    [
+                        'icon' => '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock text-[#D1BCA5]" data-fg-dx9l61="2.22:49.11889:/src/app/components/Portfolio.tsx:268:29:15020:185:e:point.icon"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>', // or 'key'
+                        'text' => 'Prazo cumprido: 6 meses',
+                    ],
+                    [
+                        'icon' => '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-key text-[#D1BCA5]" data-fg-dx9l61="2.22:49.11889:/src/app/components/Portfolio.tsx:268:29:15020:185:e:point.icon"><path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"></path><path d="m21 2-9.6 9.6"></path><circle cx="7.5" cy="15.5" r="5.5"></circle></svg>',
+                        'text' => 'Chave-na-mão completo',
+                    ],
+                ],
+            ],
+            [
+                'id' => 6,
+                'location' => 'Lisboa, Cais do Sodré',
+                'title' => 'CTT',
+                'description' => 'Transformação dos espaços existentes e ampliação do escritório para novos espaços',
+                'tags' => ['Remodelação', 'Modelação 3D', 'Gestão de Obra'],
+                'csr' => [
+                    'challenge' => 'Casa antiga com layout fechado',
+                    'solution'  => 'Conceito aberto e luz natural',
+                    'result'    => '180m² modernos e funcionais',
+                ],
+                'proof_points' => [
+                    [
+                        'icon' => '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock text-[#D1BCA5]" data-fg-dx9l61="2.22:49.11889:/src/app/components/Portfolio.tsx:268:29:15020:185:e:point.icon"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>', // or 'key'
+                        'text' => 'Prazo cumprido: 6 meses',
+                    ],
+                    [
+                        'icon' => '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-key text-[#D1BCA5]" data-fg-dx9l61="2.22:49.11889:/src/app/components/Portfolio.tsx:268:29:15020:185:e:point.icon"><path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"></path><path d="m21 2-9.6 9.6"></path><circle cx="7.5" cy="15.5" r="5.5"></circle></svg>',
+                        'text' => 'Chave-na-mão completo',
+                    ],
+                ],
+            ],
             // add more...
         ];
 
