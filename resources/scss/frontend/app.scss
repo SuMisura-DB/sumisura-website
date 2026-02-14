@@ -1014,6 +1014,10 @@ header#main-header{
                     align-items: center;
                     gap: 15px;
 
+                    a{
+                        color:unset;
+                    }
+
                     .title{
                         h6{
                             font-weight: 600;
