@@ -175,8 +175,7 @@ $(function () {
         else openMobileMenu();
     });
 
-
-
+    // Close mobile menu if click outside of header
     $(document).on('click', function (e) {
         const $header = $('#main-header');
         const $menu = $header.find('.menu-container');
@@ -189,5 +188,47 @@ $(function () {
             closeMobileMenu();
         }
     });
+    
+    const $form = $('#contact-form');
+    if (!$form.length) return;
+
+    const $btn = $form.find('button[type="submit"]').first();
+
+    let $status = $form.find('.form-status');
+    if (!$status.length) {
+        $status = $('<div class="form-status" aria-live="polite"></div>');
+        $btn.before($status);
+    }
+
+    $form.on('submit', function () {
+        if ($btn.data('busy')) return false;
+        $btn.data('busy', true);
+
+        $form.addClass('is-sending');
+        $btn.addClass('is-loading');
+
+        $btn.data('originalHtml', $btn.html());
+        $btn.html('<span class="spinner"></span>A enviar…');
+
+        // $status.removeClass('success error').addClass('show').text('A enviar o teu pedido…');
+
+        // allow native submit (into iframe)
+        return true;
+    });
+
+    // OPTIONAL: show success after a short delay (since iframe submit has no callback)
+    // You can tune timing or remove if you prefer.
+    $form.on('submit', function () {
+        setTimeout(() => {
+        $status.removeClass('error').addClass('show success').text('Enviado com sucesso ✅ Obrigado!');
+        $form.removeClass('is-sending');
+        $btn.removeClass('is-loading').html($btn.data('originalHtml') || 'Enviar Pedido');
+        $btn.data('busy', false);
+
+        // optional reset
+        // $form[0].reset();
+        }, 900);
+    });
+
 
 });

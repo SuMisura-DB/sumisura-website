@@ -658,7 +658,11 @@
                     {{-- Form container --}}
                     <div class="form-container">
 
-                        <form>
+                        <iframe name="hs_hidden_iframe" style="display:none;"></iframe>
+
+                        <form id="contact-form" method="POST" action="/contact-submit" target="hs_hidden_iframe">
+
+                            @csrf
 
                             <div class="form-grid-row r2">
 

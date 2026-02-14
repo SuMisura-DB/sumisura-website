@@ -25,6 +25,11 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'homepage'])
 Route::get('/dashboard', [App\Http\Controllers\Dashboard\DashboardController::class, 'root'])
     ->name('dashboard');
 
+Route::post('/contact-submit', function (Request $request) {
+    // do nothing; just accept the POST
+    return response()->noContent(); // 204
+});
+
 
 Route::prefix('dashboard')
     ->middleware(['auth', 'verified'])
