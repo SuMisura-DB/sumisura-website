@@ -81,34 +81,37 @@ $(function () {
     });
 
     /* Scroll down to areas */
-    $(document).on('click', '.scroll-to-section', function(e) {
+    $(document).on('click', '.scroll-to-section', function (e) {
         e.preventDefault();
 
+        const targetSection = $(this).data('section-scroll');
+        const $target = $('#' + targetSection);
+
+        if (!$target.length) return;
+
+        // close menu first
         if ($('#main-header').hasClass('menu-open')) {
             closeMobileMenu();
         }
-        
-        // Get the target section ID from data attribute
-        var targetSection = $(this).data('section-scroll');
-        var $target = $('#' + targetSection);
-        
-        if ($target.length) {
-            // Scroll to the section
-            $('html, body').animate({
-                scrollTop: $target.offset().top - headerHeight
-            }, 800); // 800ms animation duration
-            
-            // Special handling for contact-section
-            if (targetSection === 'contact-section') {
-                // Wait for scroll to complete, then focus first input
-                setTimeout(function() {
-                    var $firstInput = $target.find('form input:first');
-                    if ($firstInput.length) {
-                        $firstInput.focus();
+
+        $('html, body').stop(true).animate(
+            { scrollTop: $target.offset().top - headerHeight },
+            800,
+            function () {
+                // run AFTER scroll completes (more reliable than setTimeout)
+                if (targetSection === 'contact-section') {
+                    // pick first "real" field (input/select/textarea), skip hidden/disabled
+                    const $field = $target
+                        .find('form :input')
+                        .filter(':visible:not([type="hidden"]):not([disabled])')
+                        .first();
+
+                    if ($field.length) {
+                        $field.trigger('focus');
                     }
-                }, 850); // Slightly longer than scroll animation
+                }
             }
-        }
+        );
     });
 
 
