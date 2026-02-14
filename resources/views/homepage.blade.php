@@ -290,7 +290,8 @@
 
                         @php
                             $galleryGroup = 'portfolio-' . $item['id'];
-                            $previewImages = array_slice($item['images'], 0, 5); // preview only
+                            // $previewImages = array_slice($item['images'], 0, 5); // preview only
+                            $previewImages = $item['images'];
                         @endphp
 
                         <div class="portfolio-item">
@@ -305,7 +306,13 @@
                                         <ul class="splide__list">
                                             @forelse($previewImages as $img)
                                                 <li class="splide__slide">
-                                                    <img src="{{ $img }}" alt="{{ $item['title'] }}">
+                                                    {{-- <img src="{{ $img }}" alt="{{ $item['title'] }}"> --}}
+                                                    <img
+                                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                                                        data-splide-lazy="{{ $img }}"
+                                                        alt="{{ $item['title'] }}"
+                                                        decoding="async"
+                                                    />
                                                 </li>
                                             @empty
                                                 <li class="splide__slide">

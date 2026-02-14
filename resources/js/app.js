@@ -39,6 +39,7 @@ $(function () {
             perPage: 1,
             pagination: false,
             arrows: true,
+            lazyLoad: 'nearby'
         });
 
         // Optional: counter inside THIS slider
