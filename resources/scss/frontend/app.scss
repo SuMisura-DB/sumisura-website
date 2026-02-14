@@ -10,6 +10,13 @@ $brand-gold2: #c5aa8d;
 $secondary-text-white: #6b6868;
 $secondary-white-dark-bg: color-mix(in oklab, white 70%, transparent);
 
+.container{
+    @media (max-width:576px) {
+        padding-left: 20px!important;
+        padding-right: 20px!important;
+    }
+}
+
 body{
     font-family: 'Manrope'!important;
 }
@@ -207,6 +214,12 @@ header#main-header{
 
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
+    .inner-container{
+        @media (max-width:991px){
+            position: relative;
+        }
+    }
+
     .container{
         padding-top: 0;
         padding-bottom: 0;
@@ -242,6 +255,10 @@ header#main-header{
                 font-size: 15px;
                 transition: 0.2s all;
 
+                @media (max-width:768px) {
+                    padding: 14px 28px;
+                }
+
                 &:focus{
                     outline: unset;
                 }
@@ -251,15 +268,108 @@ header#main-header{
                 }
             }
 
-            @media (max-width:991px) {
-                display: none;
+            // @media(max-width:991px){
+            //     display: none;
+            //     position: absolute;
+            //     top: 100%;
+            //     z-index: 2;
+            //     background: black;
+            //     left: 0;
+            //     right: 0;
+            //     // padding: 30px 20px 25px 20px;
+            //     padding: 0px 20px 25px 20px;
+            //     margin-top: 20px;
+            //     background: $brand-blue;
+            //     gap: unset;
+
+            //     a{
+            //         width: 100%;
+            //         padding: 20px 0;
+            //         font-weight: 500;
+
+            //         // &:not(:last-of-type){
+            //             border-bottom: 1px solid rgba(255,255,255,0.15);
+            //         // }
+
+            //         &:last-of-type{
+            //             margin-bottom: 30px;
+            //         }
+            //     }
+
+            //     button{
+            //         width: 100%;
+            //     }
+
+            //     &.active{
+            //         // display: block;
+            //         display: flex;
+            //         flex-direction: column;
+            //     }
+            // }
+
+            @media(max-width:991px){
+                // keep it layoutable so transitions work
+                display: flex;
+                flex-direction: column;
+
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 2;
+
+                margin-top: 20px;
+                padding: 0px 20px 25px 20px;
+                background: $brand-blue;
+
+                gap: unset;
+
+                // 3) transition states
+                opacity: 0;
+                transform: translateY(-8px);
+                visibility: hidden;
+                pointer-events: none;
+
+                transition: opacity .18s ease, transform .18s ease, visibility 0s linear .18s;
+
+                a{
+                    width: 100%;
+                    padding: 20px 0;
+                    font-weight: 500;
+                    border-bottom: 1px solid rgba(255,255,255,0.15);
+
+                    &:last-of-type{
+                        margin-bottom: 30px;
+                    }
+                }
+
+                button{
+                    width: 100%;
+                }
+
+                &.active{
+                    opacity: 1;
+                    transform: translateY(0);
+                    visibility: visible;
+                    pointer-events: auto;
+
+                    transition: opacity .18s ease, transform .18s ease, visibility 0s;
+                }
             }
+
         }
     }
 
     a{
         #header-logo{
             max-width: 65px;
+        }
+    }
+
+    &.menu-open{
+        .mobile-menu-burger{
+            .burger{ display: none; }
+            .close-menu{ display: block; }
         }
     }
 
@@ -877,6 +987,10 @@ header#main-header{
         
         .content{
             grid-column: span 2 / span 2;
+
+            @media (max-width:991px) {
+                order: 2;
+            }
 
             .contact-title{
                 font-weight: 700;

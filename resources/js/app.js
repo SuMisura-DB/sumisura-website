@@ -83,6 +83,10 @@ $(function () {
     /* Scroll down to areas */
     $(document).on('click', '.scroll-to-section', function(e) {
         e.preventDefault();
+
+        if ($('#main-header').hasClass('menu-open')) {
+            closeMobileMenu();
+        }
         
         // Get the target section ID from data attribute
         var targetSection = $(this).data('section-scroll');
@@ -139,5 +143,51 @@ $(function () {
             }
         }
     /* END OF HEADER SCROLL POSITION FIXED */
+
+
+    /* Mobile Burger Button Click */
+    // $('.mobile-menu-burger').on('click', function(){
+
+    //     let mobileMenu = $('.menu-container');
+
+    //     mobileMenu.toggleClass('active');
+    // });
+
+    function openMobileMenu() {
+        const $header = $('#main-header');
+        $header.addClass('menu-open');
+        $header.find('.menu-container').addClass('active');
+    }
+
+    function closeMobileMenu() {
+        const $header = $('#main-header');
+        $header.removeClass('menu-open');
+        $header.find('.menu-container').removeClass('active');
+    }
+
+    $('.mobile-menu-burger').on('click', function (e) {
+        e.stopPropagation(); // prevents the document click (outside) from instantly closing it
+
+        const $header = $('#main-header');
+        const isOpen = $header.hasClass('menu-open');
+
+        if (isOpen) closeMobileMenu();
+        else openMobileMenu();
+    });
+
+
+
+    $(document).on('click', function (e) {
+        const $header = $('#main-header');
+        const $menu = $header.find('.menu-container');
+
+        // only act if menu is open
+        if (!$menu.hasClass('active')) return;
+
+        // if click is NOT inside the header, close it
+        if ($(e.target).closest('#main-header').length === 0) {
+            closeMobileMenu();
+        }
+    });
 
 });
