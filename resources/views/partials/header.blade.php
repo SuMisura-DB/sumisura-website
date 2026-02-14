@@ -6,7 +6,7 @@
             <div class="logo-menu-container">
 
                 {{-- Logo --}}
-                <a href="#">
+                <a href="/">
                     <img id="header-logo" src="/assets/img/logos/header-logo.png">
                 </a>
 
