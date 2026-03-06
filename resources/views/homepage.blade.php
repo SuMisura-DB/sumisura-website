@@ -197,12 +197,64 @@
 
                         <h6 class="service-title">Arquitetura e Licenciamento</h6>
 
-                        <p class="service-description">Projetos de arquitetura personalizados e gestão de licenças</p>
+                        <p class="service-description">Desenvolvemos projetos completos de arquitetura, desde o estudo preliminar até ao licenciamento e execução da obra.</p>
 
                     </div>
 
                     {{-- Service --}}
                     <div class="service-item">
+
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box text-[#29344A] group-hover:text-white transition-colors duration-300" data-fg-d95f13="2.21:2.2519:/src/app/components/Services.tsx:58:17:1993:195:e:service.icon"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>
+                        </div>
+
+                        <h6 class="service-title">Remodelação / Reabilitação Habitacional</h6>
+
+                        <p class="service-description">Renovamos e reabilitamos apartamentos e moradias, otimizando espaços com foco no design e nas ideias do cliente.</p>
+
+                    </div>
+
+                    {{-- Service --}}
+                    <div class="service-item">
+
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box text-[#29344A] group-hover:text-white transition-colors duration-300" data-fg-d95f13="2.21:2.2519:/src/app/components/Services.tsx:58:17:1993:195:e:service.icon"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>
+                        </div>
+
+                        <h6 class="service-title">Reabilitação de Espaços Comerciais / Escritórios</h6>
+
+                        <p class="service-description">Criamos e executamos soluções “chave na mão” para espaços comerciais e escritórios, aliando funcionalidade à identidade da marca, da ideia à entrega final.</p>
+
+                    </div>
+
+                    {{-- Service --}}
+                    <div class="service-item">
+
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-check text-[#29344A] group-hover:text-white transition-colors duration-300" data-fg-d95f13="2.21:2.2519:/src/app/components/Services.tsx:58:17:1993:195:e:service.icon"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>
+                        </div>
+
+                        <h6 class="service-title">Gestão e Fiscalização de Projetos / Obras</h6>
+
+                        <p class="service-description">Gerimos e fiscalizamos projetos de forma integral, garantindo prazos, orçamento e qualidade através de planeamento rigoroso e monitorização contínua.</p>
+
+                    </div>
+
+                    {{-- Service --}}
+                    <div class="service-item">
+
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-paint-bucket text-[#29344A] group-hover:text-white transition-colors duration-300"><path d="m19 11-8-8-8.6 8.6a2 2 0 0 0 0 2.8l5.2 5.2c.8.8 2 .8 2.8 0L19 11Z"></path><path d="m5 2 5 5"></path><path d="M2 13h15"></path><path d="M22 20a2 2 0 1 1-4 0c0-1.6 1.7-2.4 2-4 .3 1.6 2 2.4 2 4Z"></path></svg>
+                        </div>
+
+                        <h6 class="service-title">Design de Interiores</h6>
+
+                        <p class="service-description">Prestamos consultoria e desenvolvemos projetos de interiores que materializam o conceito idealizado pelo cliente.</p>
+
+                    </div>
+
+                    {{-- Service --}}
+                    {{-- <div class="service-item">
 
                         <div class="icon-container">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2 lucide-building-2 text-[#29344A] group-hover:text-white transition-colors duration-300" data-fg-d95f13="2.21:2.2519:/src/app/components/Services.tsx:58:17:1993:195:e:service.icon"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg>
@@ -212,59 +264,7 @@
 
                         <p class="service-description">Projetos de arquitetura personalizados e gestão de licenças</p>
 
-                    </div>
-
-                    {{-- Service --}}
-                    <div class="service-item">
-
-                        <div class="icon-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2 lucide-building-2 text-[#29344A] group-hover:text-white transition-colors duration-300" data-fg-d95f13="2.21:2.2519:/src/app/components/Services.tsx:58:17:1993:195:e:service.icon"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg>
-                        </div>
-
-                        <h6 class="service-title">Arquitetura e Licenciamento</h6>
-
-                        <p class="service-description">Projetos de arquitetura personalizados e gestão de licenças</p>
-
-                    </div>
-
-                    {{-- Service --}}
-                    <div class="service-item">
-
-                        <div class="icon-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2 lucide-building-2 text-[#29344A] group-hover:text-white transition-colors duration-300" data-fg-d95f13="2.21:2.2519:/src/app/components/Services.tsx:58:17:1993:195:e:service.icon"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg>
-                        </div>
-
-                        <h6 class="service-title">Arquitetura e Licenciamento</h6>
-
-                        <p class="service-description">Projetos de arquitetura personalizados e gestão de licenças</p>
-
-                    </div>
-
-                    {{-- Service --}}
-                    <div class="service-item">
-
-                        <div class="icon-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2 lucide-building-2 text-[#29344A] group-hover:text-white transition-colors duration-300" data-fg-d95f13="2.21:2.2519:/src/app/components/Services.tsx:58:17:1993:195:e:service.icon"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg>
-                        </div>
-
-                        <h6 class="service-title">Arquitetura e Licenciamento</h6>
-
-                        <p class="service-description">Projetos de arquitetura personalizados e gestão de licenças</p>
-
-                    </div>
-
-                    {{-- Service --}}
-                    <div class="service-item">
-
-                        <div class="icon-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building2 lucide-building-2 text-[#29344A] group-hover:text-white transition-colors duration-300" data-fg-d95f13="2.21:2.2519:/src/app/components/Services.tsx:58:17:1993:195:e:service.icon"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg>
-                        </div>
-
-                        <h6 class="service-title">Arquitetura e Licenciamento</h6>
-
-                        <p class="service-description">Projetos de arquitetura personalizados e gestão de licenças</p>
-
-                    </div>
+                    </div> --}}
 
                 </div>
 
