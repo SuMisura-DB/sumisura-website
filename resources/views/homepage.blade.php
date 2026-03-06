@@ -370,15 +370,15 @@
                                 <div class="challenge-solution-result-container">
                                     <div class="item">
                                     <span class="label">Desafio</span>
-                                    <p class="description">{{ $item['csr']['challenge'] ?? '' }}</p>
+                                    <p class="description">{!! $item['csr']['challenge'] ?? '' !!}</p>
                                     </div>
                                     <div class="item">
                                     <span class="label">Solução</span>
-                                    <p class="description">{{ $item['csr']['solution'] ?? '' }}</p>
+                                    <p class="description">{!! $item['csr']['solution'] ?? '' !!}</p>
                                     </div>
                                     <div class="item">
                                     <span class="label">Resultado</span>
-                                    <p class="description">{{ $item['csr']['result'] ?? '' }}</p>
+                                    <p class="description">{!! $item['csr']['result'] ?? '' !!}</p>
                                     </div>
                                 </div>
                                 @endif
@@ -612,7 +612,7 @@
 
                                     <div class="value">
                                         {{-- +351 912 345 678 --}}
-                                        <a href="tel:+351960147366">+351 960 147 366</a>
+                                        <a href="tel:+351935233252">+351 935 233 252</a>
                                     </div>
 
                                 </div>
