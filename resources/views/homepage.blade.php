@@ -703,10 +703,14 @@
                                     
                                     <select name="type_of_service" required>
                                         <option selected hidden value="">Por favor selecione</option>
-                                        <option>A</option>
-                                        <option>B</option>
-                                        <option>C</option>
-                                        <option>D</option>
+
+                                        <option value="Arquitetura e Licenciamento">Arquitetura e Licenciamento</option>
+                                        <option value="Planeamento e Gestão">Planeamento e Gestão</option>
+                                        <option value="Gestão e Fiscalização de Projetos">Gestão e Fiscalização de Projetos</option>
+                                        <option value="Reabilitação de Espaços Comerciais">Reabilitação de Espaços Comerciais</option>
+                                        <option value="Consultoria Técnica">Consultoria Técnica</option>
+                                        <option value="Design de Interiores">Design de Interiores</option>
+                                        <option value="Outros">Outros</option>
                                     </select>
                                 </div>
 
