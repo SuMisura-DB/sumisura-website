@@ -565,7 +565,7 @@
 
                 {{-- CTA Button --}}
                 <div class="cta-container">
-                    <button class="cta-button">
+                    <button class="cta-button scroll-to-section" data-section-scroll="contact-section">
                         Pedir Orçamento Gratuito
                     </button>
                 </div>

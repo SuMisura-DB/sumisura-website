@@ -59,7 +59,7 @@ class HomeController extends Controller
             // ],
             [
                 'id' => 3,
-                'location' => 'Lisboa, Cais do Sodré',
+                'location' => 'Lisboa',
                 'title' => 'Restaurante em Lisboa',
                 'description' => 'Obra de união de três edifícios contíguos e instalação de nova estrutura. Obra de interior de restaurante.',
                 'tags' => ['Gestão de Obra'],
@@ -81,7 +81,7 @@ class HomeController extends Controller
             ],
             [
                 'id' => 4,
-                'location' => 'Lisboa, Cais do Sodré',
+                'location' => 'Lisboa',
                 'title' => 'Hotel em Lisboa',
                 'description' => 'Reabilitação dos pisos de quartos e acessos',
                 'tags' => ['Gestão de Obra'],
@@ -103,7 +103,7 @@ class HomeController extends Controller
             ],
             [
                 'id' => 5,
-                'location' => 'Lisboa, Cais do Sodré',
+                'location' => 'Lisboa',
                 'title' => 'Escritório em Lisboa',
                 'description' => 'Transformação dos espaços existentes e ampliação do escritório para novos espaços',
                 'tags' => ['Gestão de Obra'],
@@ -125,7 +125,7 @@ class HomeController extends Controller
             ],
             [
                 'id' => 6,
-                'location' => 'Lisboa, Cais do Sodré',
+                'location' => 'Lisboa',
                 'title' => 'Escritório em Lisboa',
                 'description' => 'Transformação dos espaços existentes e ampliação do escritório para novos espaços',
                 'tags' => ['Gestão de Obra'],
